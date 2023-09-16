@@ -21,7 +21,11 @@ def cuarto_uno():
     while salir:
         move = input("Que vas a hacer? ")
         if move == "izquierda":
-            print("No tienes los objetos necesarios para salir.")
+            if "Termo" in mochila and "Mate" in mochila:
+                print("Lo has logrado. Puedes salir de la casa!")
+                exit()
+            else: 
+                print("No tienes los objetos necesarios para salir.")
         elif move == "derecha":
             salir = False
             cuarto_dos()
