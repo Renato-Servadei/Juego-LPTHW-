@@ -13,7 +13,8 @@ def cuarto_uno():
     """funcion del primer cuarto. En esta habitacion comienza 
     el juego y tambien esta la puerta de salida"""
 
-    print("\nEstás en la habitación número uno. Tienes a la izquierda una puerta y a la derecha otra. \nPuedes intentar abrirlas")
+    print("\nEstás en la habitación número uno. Tienes"\
+          " a la izquierda una puerta y a la derecha otra. \nPuedes intentar abrirlas")
     print(f"En la habitación hay dos objetos que tal vez te sirvan ({objetos[0]} y {objetos[1]}). ")
     print("Puedes guardarlos en tu mochila de a uno y solo puedes llevar dos objetos.")
     salir = True
@@ -24,7 +25,7 @@ def cuarto_uno():
             if "Termo" in mochila and "Mate" in mochila:
                 print("Lo has logrado. Puedes salir de la casa!")
                 exit()
-            else: 
+            else:
                 print("No tienes los objetos necesarios para salir.")
         elif move == "derecha":
             salir = False
