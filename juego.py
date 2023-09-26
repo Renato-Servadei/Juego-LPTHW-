@@ -43,13 +43,14 @@ def cuarto_uno():
 def cuarto_dos():
 
     print("\nEstás en la habitación número dos. Aquí hay tres puertas")
-    print("Tienes una puerta al frente, una a la izquierda y otra a la derecha. \nPuedes intentar abrirlas")
+    print("Tienes una puerta al frente, una a la izquierda y otra a la derecha." \
+          "\nPuedes intentar abrirlas")
     print(f"En la habitación hay dos objetos que tal vez te sirvan ({objetos[2]} y {objetos[3]}). ")
     print("Puedes guardarlos en tu mochila de a uno y solo puedes llevar dos objetos.")
 
     salir = False
     while not salir:
-        move = input("Que vas a hacer? ")
+        move = input("Que vas a hacer?  ")
         if move == "izquierda":
             salir = True
             cuarto_uno()
