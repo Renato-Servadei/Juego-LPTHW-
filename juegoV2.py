@@ -1,5 +1,5 @@
 mochila = ["", ""]
-objetos = {"cuarto_uno": ["Destornillador", "Mancuerna"], 
+objetos = {"cuarto_uno": ["Destornillador", "Mancuerna"],
            "cuarto_dos": ["Pelota", "Llave"],
            "cuarto_tres":["Termo", "Celular"],
            "cuarto_cuatro":["Manzana", "Billetera"],
@@ -23,7 +23,7 @@ def jugar():
             "\nPuedes intentar abrirlas")
     print(f"En la habitación hay dos objetos que tal vez te sirvan ({objetos[cuarto_actual][0]} y {objetos[cuarto_actual][1]}). ")
     print("Puedes guardarlos en tu mochila de a uno y solo puedes llevar dos objetos.")
-    
+
     while True:
         move = input("Que quieres hacer? ").strip().lower()
         if move in puertas[cuarto_actual]:
@@ -33,15 +33,15 @@ def jugar():
             indice = objetos[cuarto_actual].index(move)
             guardar(indice)
 
-        else: 
+        else:
             print("No entendí lo que quieres hacer")
 
 def cambiar_cuartos(move):
-    
+
     global cuarto_actual
     if puertas[cuarto_actual][move] == "salida":
         salir()
-    else: 
+    else:
         cuarto_actual = puertas[cuarto_actual][move]
         jugar()
 
